@@ -16,7 +16,12 @@ section {
     background-color: coral;
 }
 section span {
+    font-family: sans-serif;
     margin: 0;
     text-align: center;
     line-height: 1;
+    display: block;
+    font-weight: 700;
+    font-size: 300%;
+    padding-top: calc(50vh - 20px);
 }
