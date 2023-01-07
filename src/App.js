@@ -1,11 +1,10 @@
-// eslint-disable-next-line jsx-a11y/anchor-is-valid
-
 import React from "react";
-import LandingPage from "./practice-components/landing-page";
+//import LandingPage from "./practice-components/landing-page";
+//import ProductCart from "./practice-components/product-cart";
 
 // * import css
 const App = () => {
-    return <LandingPage />;
+    return <div></div>;
 };
 
 export default App;
