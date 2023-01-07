@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+/*     padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0; */
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+section {
+    height: 100vh;
+    background-color: coral;
+}
+section span {
+    margin: 0;
+    text-align: center;
+    line-height: 1;
+}
