@@ -1,10 +1,10 @@
-import React from "react";
-//import LandingPage from "./practice-components/landing-page";
-//import ProductCart from "./practice-components/product-cart";
+import React, { Component } from 'react'
 
-// * import css
-const App = () => {
-    return <div></div>;
-};
-
-export default App;
+export class App extends Component {
+  render() {
+    return (
+      <div>App</div>
+    )
+  }
+}
+export default App
