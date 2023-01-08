@@ -4,7 +4,7 @@ import React from "react";
 import "./product.css";
 
 const Product = (props) => {
-    const { title, price, des, img } = props;
+    const { title, price, des, img } = props.item;
     return (
         <div>
             <h2>Product Cart</h2>
