@@ -3,7 +3,8 @@ import React from "react";
 // * import style
 import "./product.css";
 
-const Product = ({title, price, des, img}) => {
+const Product = (props) => {
+    const { title, price, des, img } = props;
     return (
         <div>
             <h2>Product Cart</h2>
