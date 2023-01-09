@@ -22,7 +22,7 @@ const ProductCart = () => {
             title: "GLX",
             price: 500,
             des: "Is is the best smaty phon for 2021",
-            img: "/logo512.png",
+           // img: "/logo512.png",
         },
     ];
     return (

@@ -4,7 +4,9 @@ import React from "react";
 import "./product.css";
 
 // *  change props name
-const Product = ({ title: ProductTitle, price, des, img }) => {
+// * and 
+// * default value in  props
+const Product = ({ title: ProductTitle, price, des, img = "logo512.png" }) => {
   let title = "Product Cart";
   return (
     <div>
