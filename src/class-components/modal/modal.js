@@ -10,3 +10,8 @@ export class Modal extends Component {
 }
 
 export default Modal
+
+// * defaultProps calss componets
+Modal.defaultProps = {
+  message: "default"
+}
