@@ -28,7 +28,9 @@ const ProductCart = () => {
     return (
         <div className="container">
             {products?.map((item) => (
-                <Product key={item.id} {...item} />
+                <Product key={item.id} {...item} >
+                    <button className="btn">50%(off)</button>
+                </Product>
             ))}
         </div>
     );
