@@ -28,7 +28,7 @@ const ProductCart = () => {
     return (
         <div className="container">
             {products?.map((item) => (
-                <Product key={item.id} item={item} />
+                <Product key={item.id} {...item} />
             ))}
         </div>
     );
