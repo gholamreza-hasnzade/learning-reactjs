@@ -6,7 +6,7 @@ export class App extends Component {
     render() {
         return (
             <>
-            <Main />
+            <Main message={"this is text"}/>
               {/*   <ProductCart /> */}
             </>
         );
