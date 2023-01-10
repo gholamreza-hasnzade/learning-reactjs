@@ -1,0 +1,15 @@
+.box {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.cold {
+    background-color: aqua;
+}
+
+.hot {
+    background-color: brown;
+}
