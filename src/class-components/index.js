@@ -1,9 +1,10 @@
-import User from "./users/User";
+import Counter from "./counter/counter";
+//import User from "./users/User";
 import React, { Component } from "react";
 
 class Main extends Component {
     // * state in class Component
-  /*   constructor(props) {
+    /*   constructor(props) {
         super(props);
         this.state = {
             users: [{ id: 1, name: "Reza" }],
@@ -23,7 +24,7 @@ class Main extends Component {
     } */
 
     // * even handler
-   /*  handleClick() {
+    /*  handleClick() {
         this.setState({
             counter: this.state.counter + 1
         })
@@ -31,10 +32,11 @@ class Main extends Component {
     render() {
         return (
             <div>
-               {/*  <User {...this.state.users[0]} />
+                {/*  <User {...this.state.users[0]} />
                 <br />
                 <h2>{this.state.counter}</h2>
                 <button onClick={this.handleClick.bind(this)}>click</button> */}
+                <Counter />
             </div>
         );
     }
