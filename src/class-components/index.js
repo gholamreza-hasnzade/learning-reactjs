@@ -7,10 +7,11 @@ class Main extends Component {
         super(props);
         this.state = {
             users: [{ id: 1, name: "Reza" }],
+            counter: 0,
         };
-        this.code = 20
+        
         // * render state
-       /*  setTimeout(() => {
+        /*  setTimeout(() => {
             // eslint-disable-next-line react/no-direct-mutation-state
             this.setState({
                 users: [{ id: 1, name: "ali" }],
@@ -18,20 +19,22 @@ class Main extends Component {
         }, 1000); */
 
         // * bind in function
-        this.handleClick = this.handleClick.bind(this);
+        //this.handleClick = this.handleClick.bind(this);
     }
 
     // * even handler
-    handleClick () {
-        console.log("this click");
+    handleClick() {
+        this.setState({
+            counter: 50
+        })
     }
     render() {
         return (
             <div>
-                <User {...this.state.users[0]} />
-                <br />
-                <h2>{this.code}</h2>
-                <button onClick={this.handleClick}>click</button>
+               {/*  <User {...this.state.users[0]} />
+                <br /> */}
+                <h2>{this.state.counter}</h2>
+                <button onClick={this.handleClick.bind(this)}>click</button>
             </div>
         );
     }
