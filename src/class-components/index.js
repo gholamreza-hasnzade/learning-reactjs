@@ -9,18 +9,26 @@ class Main extends Component {
             users: [{ id: 1, name: "Reza" }],
         };
         // * render state
-        setTimeout(() => {
+       /*  setTimeout(() => {
             // eslint-disable-next-line react/no-direct-mutation-state
             this.setState({
                 users: [{ id: 1, name: "ali" }],
             });
-        }, 1000);
+        }, 1000); */
+        this.code = 20
     }
 
+    // * even handler
+    clickHandle () {
+        console.log("this click");
+    }
     render() {
         return (
             <div>
                 <User {...this.state.users[0]} />
+                <br />
+                <h2>{this.code}</h2>
+                <button onClick={this.clickHandle}>click</button>
             </div>
         );
     }
