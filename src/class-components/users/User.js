@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class User extends Component {
-
-  render() {
-    return (
-      <div>
-        <h1>Reza</h1>
-      </div>
-    )
-  } 
+//*  props in read Only
+const User = ({name}) => {
+  return (
+    <div>
+      <ul>
+        <li>{name}</li>
+      </ul>
+    </div>
+  )
 }
 
 export default User
