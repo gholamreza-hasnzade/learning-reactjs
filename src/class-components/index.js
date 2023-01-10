@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Rendring from "./rendring/rendring";
 //import Params from "./params/params";
 //import Temp from "./temp/temp";
 //import Counter from "./counter/counter";
@@ -6,10 +7,7 @@ import React, { Component } from "react";
 
 class Main extends Component {
     render() {
-        return (
-            <div>
-            </div>
-        );
+        return <Rendring />;
     }
 }
 export default Main;
