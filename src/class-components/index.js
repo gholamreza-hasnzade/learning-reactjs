@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 class Main extends Component {
     // * state in class Component
-    constructor(props) {
+  /*   constructor(props) {
         super(props);
         this.state = {
             users: [{ id: 1, name: "Reza" }],
@@ -11,30 +11,30 @@ class Main extends Component {
         };
         
         // * render state
-        /*  setTimeout(() => {
+         setTimeout(() => {
             // eslint-disable-next-line react/no-direct-mutation-state
             this.setState({
                 users: [{ id: 1, name: "ali" }],
             });
-        }, 1000); */
+        }, 1000);
 
         // * bind in function
         //this.handleClick = this.handleClick.bind(this);
-    }
+    } */
 
     // * even handler
-    handleClick() {
+   /*  handleClick() {
         this.setState({
-            counter: 50
+            counter: this.state.counter + 1
         })
-    }
+    } */
     render() {
         return (
             <div>
                {/*  <User {...this.state.users[0]} />
-                <br /> */}
+                <br />
                 <h2>{this.state.counter}</h2>
-                <button onClick={this.handleClick.bind(this)}>click</button>
+                <button onClick={this.handleClick.bind(this)}>click</button> */}
             </div>
         );
     }
