@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import FormValdtion from "./form-valdtion";
-import GuizeApp from "./quize-app";
+//import GuizeApp from "./quize-app";
+import Ticket from "./ticket";
 //import Rendring from "./rendring/rendring";
 //import Form from "./from/Form";
 //import Notification from "./notification/notification";
@@ -17,7 +18,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-               <GuizeApp />
+               <Ticket />
             </div>
         );
     }
