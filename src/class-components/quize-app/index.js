@@ -49,33 +49,60 @@ class GuizeApp extends Component {
             score: 0,
         };
     }
+    handlerClick = (isCorrect) => {
+        const { currentQuestion } = this.state;
+        if (isCorrect) {
+            this.setState((prevState) => {
+                return {
+                    score: prevState.score + 1,
+                };
+            });
+        }
+        if (currentQuestion === 3) {
+            this.setState({ showScore: true });
+        }
+        this.setState((prevState) => {
+            return {
+                currentQuestion: prevState.currentQuestion + 1,
+            };
+        });
+    };
     render() {
-        const { questions, showScore, score } = this.state;
+        const { questions, showScore, currentQuestion, score } = this.state;
         return (
             <div className="app">
                 {/* next div is for showing user score */}
                 {showScore ? (
-                    <div className="score-section">You scored {score} out of {questions.length}</div>
+                    <div className="score-section">
+                        You scored {score} out of {questions.length}
+                    </div>
                 ) : (
                     <>
                         <div className="question-section">
                             <div className="question-count">
-                                <span>Question 1</span>/ 4
+                                <span>Question {currentQuestion}</span>/{" "}
+                                {questions.length}
                             </div>
                             <div className="question-text">
-                                {
-                                    questions[this.state.currentQuestion]
-                                        .questionText
-                                }
+                                {questions[currentQuestion].questionText}
                             </div>
                         </div>
 
                         <div className="answer-section">
-                            {questions[
-                                this.state.currentQuestion
-                            ].answerOptions.map((question) => (
-                                <button>{question.answerText}</button>
-                            ))}
+                            {questions[currentQuestion].answerOptions.map(
+                                (question) => (
+                                    <button
+                                        key={question.answerText}
+                                        onClick={() =>
+                                            this.handlerClick(
+                                                question.isCorrect
+                                            )
+                                        }
+                                    >
+                                        {question.answerText}
+                                    </button>
+                                )
+                            )}
                         </div>
                     </>
                 )}
