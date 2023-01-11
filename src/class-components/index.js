@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Rendring from "./rendring/rendring";
-import Form from "./from/Form";
+import FormValdtion from "./form-valdtion";
+//import Rendring from "./rendring/rendring";
+//import Form from "./from/Form";
 //import Notification from "./notification/notification";
 //import Params from "./params/params";
 //import Temp from "./temp/temp";
@@ -15,7 +16,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-               <Form />
+               <FormValdtion />
             </div>
         );
     }
