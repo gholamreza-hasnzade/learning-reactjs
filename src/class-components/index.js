@@ -7,23 +7,12 @@ import Rendring from "./rendring/rendring";
 import User from "./users/User";
 
 class Main extends Component {
-    constructor() {
-        super();
-        this.state = {
-            users: [
-                { id: 1, name: "reza" },
-                { id: 2, name: "mmad" },
-                { id: 3, name: "ali" },
-            ],
-        };
-    }
+  
     render() {
         return (
-            <>
-                {this.state.users.map((user) => (
-                    <User user={user} key={user.id} />
-                ))}
-            </>
+            <div>
+               
+            </div>
         );
     }
 }
