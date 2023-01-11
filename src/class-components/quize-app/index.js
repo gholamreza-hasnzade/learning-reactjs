@@ -50,12 +50,12 @@ class GuizeApp extends Component {
         };
     }
     render() {
-        const { questions, showScore } = this.state;
+        const { questions, showScore, score } = this.state;
         return (
             <div className="app">
                 {/* next div is for showing user score */}
                 {showScore ? (
-                    <div className="score-section">You scored 0 out of 4</div>
+                    <div className="score-section">You scored {score} out of {questions.length}</div>
                 ) : (
                     <>
                         <div className="question-section">
