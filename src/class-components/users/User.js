@@ -1,11 +1,11 @@
 import React from 'react'
 
 //*  props in read Only
-const User = ({name}) => {
+const User = ({user}) => {
   return (
     <div>
       <ul>
-        <li>{name}</li>
+        <li>{user.name}</li>
       </ul>
     </div>
   )
