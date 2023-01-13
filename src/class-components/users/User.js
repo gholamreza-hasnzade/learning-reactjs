@@ -1,14 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class User extends Component {
+//*  props in read Only
+const User = ({user}) => {
+  /* 
+   constructor() {
+        super();
+        this.state = {
+            users: [
+                { id: 1, name: "reza" },
+                { id: 2, name: "mmad" },
+                { id: 3, name: "ali" },
+            ],
+        };
+    }
 
-  render() {
-    return (
-      <div>
-        <h1>Reza</h1>
-      </div>
-    )
-  } 
+     {this.state.users.map((user) => (
+                    <User user={user} key={user.id} />
+                ))}
+  */
+  return (
+    <div>
+      <ul>
+        <li>{user.name}</li>
+      </ul>
+    </div>
+  )
 }
 
 export default User
