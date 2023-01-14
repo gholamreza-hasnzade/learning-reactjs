@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Note from "./Note";
 import ColorBox from "./ColorBox";
 import "./App.css";
+
 export default class NoteApp extends Component {
     constructor(props) {
         super(props);
@@ -55,6 +56,16 @@ export default class NoteApp extends Component {
         this.setState({
             noteTitle: "",
             inputColor: "#fff",
+        });
+    };
+
+    removeNoteApp = (colorId) => {
+        const removeNote = this.state.notes.filter(
+            (note) => note.id !== colorId
+        );
+
+        this.setState({
+            notes: removeNote,
         });
     };
     render() {
@@ -137,7 +148,12 @@ export default class NoteApp extends Component {
                                                     className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-3 card-columns"
                                                     key={note?.id}
                                                 >
-                                                    <Note {...note} />
+                                                    <Note
+                                                        {...note}
+                                                        onRemove={
+                                                            this.removeNoteApp
+                                                        }
+                                                    />
                                                 </div>
                                             ))}
                                         </div>
