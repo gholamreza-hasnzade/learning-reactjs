@@ -50,6 +50,13 @@ export default class NoteApp extends Component {
             });
         }
     };
+
+    claerState = () => {
+        this.setState({
+            noteTitle: "",
+            inputColor: "#fff",
+        });
+    };
     render() {
         const { colors, notes, noteTitle } = this.state;
         return (
@@ -109,6 +116,7 @@ export default class NoteApp extends Component {
                                             id="btn-delete"
                                             type="button"
                                             className="btn btn-outline-danger"
+                                            onClick={this.claerState}
                                         >
                                             <span
                                                 id="btn-icon"
