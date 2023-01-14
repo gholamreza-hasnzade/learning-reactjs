@@ -65,8 +65,12 @@ export default class Shop extends Component {
             ],
         };
     }
+    addToCartHandler = (cartId) => {
+        console.log(cartId);
+    };
 
     render() {
+        const { products, shoppingCart } = this.state;
         return (
             <>
                 <header className="main-header">
@@ -83,11 +87,15 @@ export default class Shop extends Component {
                             </li>
                         </ul>
                     </nav>
-                    <h1 className="band-name band-name-large">SabzLearn Shop</h1>
+                    <h1 className="band-name band-name-large">
+                        SabzLearn Shop
+                    </h1>
                 </header>
                 <section className="container content-section">
                     <div className="shop-items">
-                        <Product />
+                        {products.map((product) => (
+                            <Product key={product.id} {...product} onClick={this.addToCartHandler} />
+                        ))}
                     </div>
                 </section>
                 <section className="container content-section">
@@ -104,7 +112,9 @@ export default class Shop extends Component {
                         </span>
                     </div>
                     <div className="cart-items">
-                        <CartProduct />
+                        {shoppingCart.map((cart) => (
+                            <CartProduct {...cart} key={cart?.id} />
+                        ))}
                     </div>
                     <button
                         className="btn btn-primary btn-purchase"

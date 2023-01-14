@@ -18,7 +18,7 @@ import Shop from "./shop/Shop";
 class Main extends Component {
     render() {
         return (
-            <div className="container mt-4">
+            <div className="">
                 <Shop />
             </div>
         );
