@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import AddForm from "./book/addForm";
-import Header from "./book/header";
+import Shop from "./shop/Shop";
+//import AddForm from "./book/addForm";
+//import Header from "./book/header";
 //import {FiUsers} from "react-icons/fi"
-
 //import FormValdtion from "./form-valdtion";
 //import GuizeApp from "./quize-app";
 //import Ticket from "./ticket";
@@ -19,8 +19,7 @@ class Main extends Component {
     render() {
         return (
             <div className="container mt-4">
-                <Header />
-                <AddForm />
+                <Shop />
             </div>
         );
     }
