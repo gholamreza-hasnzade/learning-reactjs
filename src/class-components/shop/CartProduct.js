@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 export default class CartProduct extends Component {
     render() {
-        const { id, title, img, price } = this.props;
+        const { id, title, img, price, onRemove } = this.props;
         return (
             <div className="cart-row">
                 <div className="cart-item cart-column">
@@ -16,7 +16,11 @@ export default class CartProduct extends Component {
                 </div>
                 <span className="cart-price cart-column">$ {price}</span>
                 <div className="cart-quantity cart-column">
-                    <button className="btn btn-danger" type="button">
+                    <button
+                        className="btn btn-danger"
+                        type="button"
+                        onClick={() => onRemove(id)}
+                    >
                         REMOVE
                     </button>
                 </div>

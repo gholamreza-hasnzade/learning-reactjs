@@ -80,6 +80,16 @@ export default class Shop extends Component {
         });
     };
 
+    removeShoppingCartHandler = (cartId) => {
+        const minaShoppingCart = this.state.shoppingCart;
+        const filterShoppingCart = minaShoppingCart.filter(
+            (cart) => cart.id !== cartId
+        );
+        this.setState({
+            shoppingCart: filterShoppingCart,
+        });
+    };
+
     render() {
         const { products, shoppingCart } = this.state;
 
@@ -128,8 +138,12 @@ export default class Shop extends Component {
                         </span>
                     </div>
                     <div className="cart-items">
-                        {shoppingCart.map((cart) => (
-                            <CartProduct {...cart} key={cart?.id} />
+                        {shoppingCart.map((cart, index) => (
+                            <CartProduct
+                                {...cart}
+                                key={index}
+                                onRemove={this.removeShoppingCartHandler}
+                            />
                         ))}
                     </div>
                     <button
