@@ -12,24 +12,64 @@ export default class TodoList extends Component {
             status: "all",
         };
     }
-    addTodo = () => {};
+    addTodo = (e) => {
+        e.preventDefault();
+        const { todoTitle, todos } = this.state;
+
+        if (todoTitle) {
+            const newTodo = {
+                id: todos.length + 1,
+                title: todoTitle,
+                completed: false,
+            };
+
+            this.setState({
+                todos: [...todos, newTodo],
+                todoTitle: "",
+            });
+        }
+
+        this.setState({
+            title: "",
+            status: "all",
+        });
+    };
     removeTodo = () => {};
     editTodo = () => {};
-    todoTitleHandler = () => {};
-    statusHandler = () => {};
+    statusHandler = (event) => {
+        this.setState({
+            status: event.target.value,
+        });
+    };
+
+    todoTitleHandler(evt, field) {
+        this.setState({ [field]: evt.target.value });
+    }
 
     render() {
-        const { todos } = this.state;
+        const { todos, todoTitle } = this.state;
         return (
             <>
                 <Header />
-                <form>
-                    <input type="text" className="todo-input" maxLength="40" />
+                <form onSubmit={this.addTodo}>
+                    <input
+                        type="text"
+                        value={todoTitle}
+                        className="todo-input"
+                        maxLength="40"
+                        onChange={(event) =>
+                            this.todoTitleHandler(event, "todoTitle")
+                        }
+                    />
                     <button className="todo-button" type="submit">
                         <i className="fas fa-plus-square"></i>
                     </button>
                     <div className="select">
-                        <select name="todos" className="filter-todo">
+                        <select
+                            name="todos"
+                            className="filter-todo"
+                            onChange={this.statusHandler}
+                        >
                             <option value="all">All</option>
                             <option value="completed">Completed</option>
                             <option value="uncompleted">Uncompleted</option>
