@@ -67,13 +67,7 @@ export default class Shop extends Component {
     }
     addToCartHandler = (cartId) => {
         const mainProducts = this.state.products;
-        const findProduct = mainProducts.find(
-            (product) => product.id === cartId
-        );
-        const product = {
-            id: mainProducts.length + 1,
-            ...findProduct,
-        };
+        const product = mainProducts.find((product) => product.id === cartId);
 
         this.setState({
             shoppingCart: [...this.state.shoppingCart, product],
