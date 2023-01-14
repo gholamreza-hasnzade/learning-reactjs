@@ -91,14 +91,39 @@ export default class TodoList extends Component {
 
                 <div className="todo-container">
                     <ul className="todo-list">
-                        {todos.map((todo) => (
-                            <Todo
-                                key={todo?.id}
-                                {...todo}
-                                onRemove={this.removeTodo}
-                                onEdit={this.editTodo}
-                            />
-                        ))}
+                        {this.state.status === "completed" &&
+                            this.state.todos
+                                .filter((todo) => todo.completed)
+                                .map((todo) => (
+                                    <Todo
+                                        key={todo.id}
+                                        {...todo}
+                                        onRemove={this.removeTodo}
+                                        onEdit={this.editTodo}
+                                    />
+                                ))}
+
+                        {this.state.status === "uncompleted" &&
+                            this.state.todos
+                                .filter((todo) => !todo.completed)
+                                .map((todo) => (
+                                    <Todo
+                                        key={todo.id}
+                                        {...todo}
+                                        onRemove={this.removeTodo}
+                                        onEdit={this.editTodo}
+                                    />
+                                ))}
+
+                        {this.state.status === "all" &&
+                            this.state.todos.map((todo) => (
+                                <Todo
+                                    key={todo.id}
+                                    {...todo}
+                                    onRemove={this.removeTodo}
+                                    onEdit={this.editTodo}
+                                />
+                            ))}
                     </ul>
                 </div>
             </>
