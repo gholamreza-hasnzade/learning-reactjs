@@ -59,7 +59,7 @@ export default class TodoList extends Component {
     }
 
     render() {
-        const { todos, todoTitle } = this.state;
+        const { todoTitle } = this.state;
         return (
             <>
                 <Header />

@@ -2,9 +2,13 @@ import React, { Component } from "react";
 
 export default class ColorBox extends Component {
     render() {
-        const { color } = this.props;
+        const { color, onBackground } = this.props;
         return (
-            <div className="color-box" style={{ backgroundColor: color }}></div>
+            <div
+                className="color-box"
+                style={{ backgroundColor: color }}
+                onClick={() => onBackground(color)}
+            ></div>
         );
     }
 }

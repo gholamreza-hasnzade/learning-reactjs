@@ -25,11 +25,33 @@ export default class NoteApp extends Component {
         };
     }
 
+    changeBackground = (bgcolod) => {
+        const colors = this.state.colors;
+        const newBg = colors.find((color) => color === bgcolod);
+        this.setState({
+            inputColor: newBg,
+        });
+    };
+    addToNote = () => {
+        console.log(this.state);
+        const { noteTitle, inputColor, notes } = this.state;
 
-    
+        if (noteTitle) {
+            const newNote = {
+                id: notes.length + 1,
+                title: noteTitle,
+                color: inputColor,
+            };
 
+            this.setState({
+                notes: [...notes, newNote],
+                noteTitle: "",
+                inputColor: "#fff",
+            });
+        }
+    };
     render() {
-        const { colors } = this.state;
+        const { colors, notes, noteTitle } = this.state;
         return (
             <>
                 <div>
@@ -52,7 +74,13 @@ export default class NoteApp extends Component {
                                                 backgroundColor:
                                                     this.state.inputColor,
                                             }}
+                                            value={noteTitle}
                                             placeholder="Something here..."
+                                            onChange={(e) =>
+                                                this.setState({
+                                                    noteTitle: e.target.value,
+                                                })
+                                            }
                                         />
                                     </div>
                                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
@@ -61,6 +89,9 @@ export default class NoteApp extends Component {
                                                 <ColorBox
                                                     color={color}
                                                     key={index}
+                                                    onBackground={
+                                                        this.changeBackground
+                                                    }
                                                 />
                                             ))}
                                         </div>
@@ -70,6 +101,7 @@ export default class NoteApp extends Component {
                                             id="btn-save"
                                             type="button"
                                             className="btn btn-outline-info"
+                                            onClick={this.addToNote}
                                         >
                                             <span className="fa fa-plus"></span>
                                         </button>
@@ -91,12 +123,15 @@ export default class NoteApp extends Component {
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                     <div className="container">
                                         <div className="row">
-                                            <div
-                                                id="listed"
-                                                className="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 p-3 card-columns"
-                                            >
-                                                <Note />
-                                            </div>
+                                            {notes.map((note) => (
+                                                <div
+                                                    id="listed"
+                                                    className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 p-3 card-columns"
+                                                    key={note?.id}
+                                                >
+                                                    <Note {...note} />
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
