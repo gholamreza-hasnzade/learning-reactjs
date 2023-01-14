@@ -66,11 +66,23 @@ export default class Shop extends Component {
         };
     }
     addToCartHandler = (cartId) => {
-        console.log(cartId);
+        const mainProducts = this.state.products;
+        const findProduct = mainProducts.find(
+            (product) => product.id === cartId
+        );
+        const product = {
+            id: mainProducts.length + 1,
+            ...findProduct,
+        };
+
+        this.setState({
+            shoppingCart: [...this.state.shoppingCart, product],
+        });
     };
 
     render() {
         const { products, shoppingCart } = this.state;
+        console.log(shoppingCart);
         return (
             <>
                 <header className="main-header">
@@ -94,7 +106,11 @@ export default class Shop extends Component {
                 <section className="container content-section">
                     <div className="shop-items">
                         {products.map((product) => (
-                            <Product key={product.id} {...product} onClick={this.addToCartHandler} />
+                            <Product
+                                key={product.id}
+                                {...product}
+                                onClick={this.addToCartHandler}
+                            />
                         ))}
                     </div>
                 </section>
