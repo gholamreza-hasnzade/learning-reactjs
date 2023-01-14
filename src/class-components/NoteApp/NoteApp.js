@@ -34,7 +34,6 @@ export default class NoteApp extends Component {
         });
     };
     addToNote = () => {
-        console.log(this.state);
         const { noteTitle, inputColor, notes } = this.state;
 
         if (noteTitle) {
@@ -59,9 +58,9 @@ export default class NoteApp extends Component {
         });
     };
 
-    removeNoteApp = (colorId) => {
+    removeNoteApp = (nodeId) => {
         const removeNote = this.state.notes.filter(
-            (note) => note.id !== colorId
+            (note) => note.id !== nodeId
         );
 
         this.setState({
