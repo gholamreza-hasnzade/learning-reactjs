@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import AddForm from "./book/addForm";
+import Header from "./book/header";
 //import {FiUsers} from "react-icons/fi"
 
 //import FormValdtion from "./form-valdtion";
@@ -14,11 +16,11 @@ import React, { Component } from "react";
 //import User from "./users/User";
 
 class Main extends Component {
-   
     render() {
         return (
-            <div>
-              
+            <div className="container mt-4">
+                <Header />
+                <AddForm />
             </div>
         );
     }
