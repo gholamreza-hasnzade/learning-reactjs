@@ -74,9 +74,15 @@ export default class Shop extends Component {
         });
     };
 
+    emptyShoppingCartHandler = () => {
+        this.setState({
+            shoppingCart: [],
+        });
+    };
+
     render() {
         const { products, shoppingCart } = this.state;
-        console.log(shoppingCart);
+
         return (
             <>
                 <header className="main-header">
@@ -129,6 +135,7 @@ export default class Shop extends Component {
                     <button
                         className="btn btn-primary btn-purchase"
                         type="button"
+                        onClick={this.emptyShoppingCartHandler}
                     >
                         Empty Cart
                     </button>
