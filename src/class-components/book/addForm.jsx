@@ -43,7 +43,6 @@ class AddForm extends Component {
 
     render() {
         const { title, author, year, books } = this.state;
-        console.log(books);
         return (
             <>
                 <form

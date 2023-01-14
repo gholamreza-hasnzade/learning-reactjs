@@ -28,14 +28,26 @@ export default class TodoList extends Component {
                 todoTitle: "",
             });
         }
-
+    };
+    removeTodo = (todoId) => {
+        const mainTodos = this.state.todos;
+        const filterTodo = mainTodos.filter((todo) => todo.id !== todoId);
         this.setState({
-            title: "",
-            status: "all",
+            todos: filterTodo,
         });
     };
-    removeTodo = () => {};
-    editTodo = () => {};
+    editTodo = (todoId) => {
+        const newTodos = [...this.state.todos];
+        newTodos.forEach((todo) => {
+            if (todo.id === todoId) {
+                todo.completed = !todo.completed;
+            }
+        });
+
+        this.setState({
+            todos: newTodos,
+        });
+    };
     statusHandler = (event) => {
         this.setState({
             status: event.target.value,
@@ -80,7 +92,12 @@ export default class TodoList extends Component {
                 <div className="todo-container">
                     <ul className="todo-list">
                         {todos.map((todo) => (
-                            <Todo key={todo?.id} {...todo} />
+                            <Todo
+                                key={todo?.id}
+                                {...todo}
+                                onRemove={this.removeTodo}
+                                onEdit={this.editTodo}
+                            />
                         ))}
                     </ul>
                 </div>
