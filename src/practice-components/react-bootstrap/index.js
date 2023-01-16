@@ -48,7 +48,7 @@ export const ReactBootstrap = () => {
 
   return (
     <div className="container m-5">
-      <Card style={{ width: "18rem" }}>
+   {/*    <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Album_4} />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
@@ -101,7 +101,7 @@ export const ReactBootstrap = () => {
           </Card.Body>
         </Card>
       ))}
-    </>
+    </> */}
     </div>
   );
 };
