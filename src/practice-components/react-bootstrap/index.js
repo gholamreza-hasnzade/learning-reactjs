@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Alert, Button, Card, Modal, Stack } from "react-bootstrap";
 import Album_4 from "./Album_4.png";
 export const ReactBootstrap = () => {
-  const [show, setShow] = useState(false);
+/*   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true); */
   /*  return (
     <div>
       <Stack direction="horizontal" gap={2}>
@@ -107,7 +107,7 @@ export const ReactBootstrap = () => {
       ))}
     </> */}
 
-      <>
+ {/*      <>
         <Button variant="primary" onClick={handleShow}>
           Launch demo modal
         </Button>
@@ -126,7 +126,7 @@ export const ReactBootstrap = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-      </>
+      </> */}
     </div>
   );
 };
