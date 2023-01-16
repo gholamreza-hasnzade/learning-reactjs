@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { Alert, Button, Card, Stack } from "react-bootstrap";
+import { Alert, Button, Card, Modal, Stack } from "react-bootstrap";
 import Album_4 from "./Album_4.png";
 export const ReactBootstrap = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   /*  return (
     <div>
       <Stack direction="horizontal" gap={2}>
@@ -48,7 +52,7 @@ export const ReactBootstrap = () => {
 
   return (
     <div className="container m-5">
-   {/*    <Card style={{ width: "18rem" }}>
+      {/*    <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Album_4} />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
@@ -102,6 +106,27 @@ export const ReactBootstrap = () => {
         </Card>
       ))}
     </> */}
+
+      <>
+        <Button variant="primary" onClick={handleShow}>
+          Launch demo modal
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
     </div>
   );
 };
