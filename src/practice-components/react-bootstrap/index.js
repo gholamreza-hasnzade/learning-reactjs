@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Alert, Button, Card, Stack } from "react-bootstrap";
-
+import Album_4 from "./Album_4.png";
 export const ReactBootstrap = () => {
   /*  return (
     <div>
@@ -48,7 +48,7 @@ export const ReactBootstrap = () => {
 
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="./Album_4.png" />
+      <Card.Img variant="top" src={Album_4} />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
