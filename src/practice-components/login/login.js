@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
+import { Container, Col, Row } from "react-bootstrap";
+import Menus from "./menu";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+    return (
+        <Container fluid>
+            <Row>
+                <Menus />
+                <Col xs={12} md={6}>
+                    {/*   <LeftSide /> */}
+                </Col>
 
-export default Login
+                <Col xs={12} md={6}>
+                    {/*   <RightSide /> */}
+                </Col>
+            </Row>
+        </Container>
+    );
+};
+
+export default Login;
