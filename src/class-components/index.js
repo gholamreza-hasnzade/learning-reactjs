@@ -20,8 +20,8 @@ import NoteApp from "./NoteApp/NoteApp";
 class Main extends Component {
     render() {
         return (
-            <div className="">
-                <NoteApp />
+            <div>
+
             </div>
         );
     }

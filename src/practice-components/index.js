@@ -5,7 +5,7 @@ import Login from "./login/login";
 const Parctice = () => {
   return (
     <div>
-      <Login />
+     {/*  <Login /> */}
     </div>
   );
 };
