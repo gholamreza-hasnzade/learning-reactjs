@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import Menus from "./menu";
+import RightSide from "./RightSide";
 
 const Login = () => {
     return (
@@ -12,7 +13,7 @@ const Login = () => {
                 </Col>
 
                 <Col xs={12} md={6}>
-                    {/*   <RightSide /> */}
+                      <RightSide />
                 </Col>
             </Row>
         </Container>
