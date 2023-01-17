@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import {
+/* import {
     Alert,
     Button,
     Card,
@@ -10,7 +10,7 @@ import {
     Row,
     Stack,
 } from "react-bootstrap";
-import Album_4 from "./Album_4.png";
+import Album_4 from "./Album_4.png"; */
 
 export const ReactBootstrap = () => {
     /*   const [show, setShow] = useState(false);
@@ -138,7 +138,7 @@ export const ReactBootstrap = () => {
           </Modal.Footer>
         </Modal>
       </> */}
-            <Container>
+{/*             <Container>
                 <Row>
                     <Col xs={12} md={8}>
                         xs=12 md=8
@@ -148,7 +148,6 @@ export const ReactBootstrap = () => {
                     </Col>
                 </Row>
 
-                {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
                 <Row>
                     <Col xs={6} md={4}>
                         xs=6 md=4
@@ -161,12 +160,11 @@ export const ReactBootstrap = () => {
                     </Col>
                 </Row>
 
-                {/* Columns are always 50% wide, on mobile and desktop */}
                 <Row>
                     <Col xs={6}>xs=6</Col>
                     <Col xs={6}>xs=6</Col>
                 </Row>
-            </Container>
+            </Container> */}
         </>
     );
 };

@@ -1,10 +1,11 @@
 import React from "react";
-import { ReactBootstrap } from "./react-bootstrap";
+/* import { ReactBootstrap } from "./react-bootstrap"; */
+import Login from "./login/login";
 
 const Parctice = () => {
   return (
     <div>
-      <ReactBootstrap />
+      <Login />
     </div>
   );
 };
