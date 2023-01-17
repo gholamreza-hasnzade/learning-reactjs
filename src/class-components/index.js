@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+//import LifeCycle from "./LifeCycle";
 //import Shop from "./shop/Shop";
 //import TodoList from "./todolists/TodoList";
 //import NoteApp from "./NoteApp/NoteApp";
@@ -18,11 +19,11 @@ import React, { Component } from "react";
 //import User from "./users/User";
 
 class Main extends Component {
+
     render() {
         return (
-            <div>
-
-            </div>
+            <>
+            </>
         );
     }
 }

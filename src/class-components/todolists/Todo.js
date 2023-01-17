@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 export default class Todo extends Component {
+   
     render() {
         const { id, title, completed, onRemove, onEdit } = this.props;
         return (

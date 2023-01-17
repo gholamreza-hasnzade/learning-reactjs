@@ -6,11 +6,16 @@ import "./App.css";
 export default class TodoList extends Component {
     constructor(props) {
         super(props);
+        console.log(`TodoList => constructor`);
         this.state = {
             todos: [],
             todoTitle: "",
             status: "all",
         };
+    }
+
+    static getDerivedStateFromProps(prevProps, prevState) {
+        console.log(prevProps, prevState);
     }
     addTodo = (e) => {
         e.preventDefault();
