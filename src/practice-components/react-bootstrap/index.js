@@ -1,12 +1,23 @@
 import React, { useState } from "react";
-import { Alert, Button, Card, Modal, Stack } from "react-bootstrap";
+
+import {
+    Alert,
+    Button,
+    Card,
+    Col,
+    Container,
+    Modal,
+    Row,
+    Stack,
+} from "react-bootstrap";
 import Album_4 from "./Album_4.png";
+
 export const ReactBootstrap = () => {
-/*   const [show, setShow] = useState(false);
+    /*   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true); */
-  /*  return (
+    /*  return (
     <div>
       <Stack direction="horizontal" gap={2}>
         <Button as="a" variant="primary">
@@ -34,7 +45,7 @@ export const ReactBootstrap = () => {
     </div>
   ); */
 
-  /*   const [show, setShow] = useState(true);
+    /*   const [show, setShow] = useState(true);
 
   if (show) {
     return (
@@ -50,9 +61,9 @@ export const ReactBootstrap = () => {
   }
   return <Button onClick={() => setShow(true)}>Show Alert</Button>; */
 
-  return (
-    <div className="container m-5">
-      {/*    <Card style={{ width: "18rem" }}>
+    return (
+        <>
+            {/*    <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={Album_4} />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
@@ -107,7 +118,7 @@ export const ReactBootstrap = () => {
       ))}
     </> */}
 
- {/*      <>
+            {/*      <>
         <Button variant="primary" onClick={handleShow}>
           Launch demo modal
         </Button>
@@ -127,6 +138,35 @@ export const ReactBootstrap = () => {
           </Modal.Footer>
         </Modal>
       </> */}
-    </div>
-  );
+            <Container>
+                <Row>
+                    <Col xs={12} md={8}>
+                        xs=12 md=8
+                    </Col>
+                    <Col xs={6} md={4}>
+                        xs=6 md=4
+                    </Col>
+                </Row>
+
+                {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
+                <Row>
+                    <Col xs={6} md={4}>
+                        xs=6 md=4
+                    </Col>
+                    <Col xs={6} md={4}>
+                        xs=6 md=4
+                    </Col>
+                    <Col xs={6} md={4}>
+                        xs=6 md=4
+                    </Col>
+                </Row>
+
+                {/* Columns are always 50% wide, on mobile and desktop */}
+                <Row>
+                    <Col xs={6}>xs=6</Col>
+                    <Col xs={6}>xs=6</Col>
+                </Row>
+            </Container>
+        </>
+    );
 };
