@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //import Shop from "./shop/Shop";
 //import TodoList from "./todolists/TodoList";
-import NoteApp from "./NoteApp/NoteApp";
+//import NoteApp from "./NoteApp/NoteApp";
 //import AddForm from "./book/addForm";
 //import Header from "./book/header";
 //import {FiUsers} from "react-icons/fi"
