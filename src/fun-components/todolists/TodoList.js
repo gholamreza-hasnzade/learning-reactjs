@@ -42,6 +42,9 @@ const TodoList = () => {
         });
         seTodos(newTodos);
     };
+    const statusHandler = (event) => {
+        setStatus(event.target.value);
+    };
     return (
         <>
             <Header />
@@ -61,7 +64,7 @@ const TodoList = () => {
                     <select
                         name="todos"
                         className="filter-todo"
-                        /*  onChange={this.statusHandler} */
+                        onChange={statusHandler}
                     >
                         <option value="all">All</option>
                         <option value="completed">Completed</option>
