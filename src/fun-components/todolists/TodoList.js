@@ -25,15 +25,23 @@ const TodoList = () => {
             seTodos((prevState) => {
                 return [...prevState, newTodo];
             });
-            setTodoTitle("")
+            setTodoTitle("");
         }
     };
-    const removeTodo = () => {
-
-    }
-    const editTodo = () => {
-
-    }
+    const removeTodo = (todoId) => {
+        const mainTodos = todos;
+        const filterTodo = mainTodos.filter((todo) => todo.id !== todoId);
+        seTodos(filterTodo);
+    };
+    const editTodo = (todoId) => {
+        const newTodos = [...todos];
+        newTodos.forEach((todo) => {
+            if (todo.id === todoId) {
+                todo.completed = !todo.completed;
+            }
+        });
+        seTodos(newTodos);
+    };
     return (
         <>
             <Header />
