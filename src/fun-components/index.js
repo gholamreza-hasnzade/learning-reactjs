@@ -1,13 +1,12 @@
 import React from "react";
-/* import { ReactBootstrap } from "./react-bootstrap"; */
-import Login from "./login/login";
+import State from "./state";
 
 const Parctice = () => {
-  return (
-    <div>
-     {/*  <Login /> */}
-    </div>
-  );
+    return (
+        <div>
+            <State />
+        </div>
+    );
 };
 
 export default Parctice;
