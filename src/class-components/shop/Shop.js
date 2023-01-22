@@ -9,7 +9,7 @@ import img3 from "./images/Album_3.png";
 import img4 from "./images/Album_4.png";
 import Cofee from "./images/Cofee.png";
 import Shirt from "./images/Shirt.png";
-
+ 
 import "./App.css";
 export default class Shop extends Component {
     constructor(props) {
