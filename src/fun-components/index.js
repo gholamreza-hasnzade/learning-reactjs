@@ -1,10 +1,11 @@
 import React from "react";
-import State from "./state";
+//import State from "./state";
+import TodoList from "./todolists/TodoList";
 
 const Parctice = () => {
     return (
         <div>
-            <State />
+            <TodoList />
         </div>
     );
 };
