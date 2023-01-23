@@ -7,9 +7,9 @@ const State = () => {
       console.log("this work"); // Mount - Updating
     }) */
 
-    useEffect(() => {
+  /*   useEffect(() => {
         console.log("this work"); // Mount - Updating
-      },[count])
+      },[count]) */
     
     return (
         <div>
