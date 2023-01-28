@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from 'react'
 //import Parctice from "./fun-components";
 //import Main from "./class-components";
 
-export class App extends Component {
-    render() {
-        return (
-            <>
-                
-            </>
-        );
-    }
+const App = () => {
+  return (
+    <div>App</div>
+  )
 }
-export default App;
+
+export default App
