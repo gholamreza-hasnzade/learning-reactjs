@@ -16,6 +16,7 @@ const App = () => {
                 <Route element={<About />} path="/about" />
                 <Route element={<Posts />} path="/posts" />
                 <Route element={<Post />} path="/post/:id" />
+                <Route element={<h1>404</h1>} path="*" />
             </Routes>
         </BrowserRouter>
     );
