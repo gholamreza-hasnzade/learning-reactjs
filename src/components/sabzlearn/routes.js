@@ -1,6 +1,8 @@
 import Courses from "./Courses";
 import About from "./About";
 import MainCourse from "./MainCourse";
+import Panel from "./Panel";
+import Login from "./Login";
 
 const routes = [
     { path: "/courses", element: <Courses /> },
@@ -19,5 +21,7 @@ const routes = [
             },
         ],
     },
+    { path: "/login", element: <Login /> },
+    { path: "/panel", element: <Panel /> },
 ];
 export default routes;
