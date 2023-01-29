@@ -12,7 +12,18 @@ const Sablearn = () => {
             <Routes>
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/course/:courseID" element={<MainCourse />} />
-                <Route path="/about/*" element={<About />} />
+                <Route path="/about/*" element={<About />}>
+                    <Route
+                        path="setting"
+                        element={<p style={{ textAlign: "center" }}>Setting</p>}
+                    />
+                    <Route
+                        path="dashboard"
+                        element={
+                            <p style={{ textAlign: "center" }}>Dashboard</p>
+                        }
+                    />
+                </Route>
             </Routes>
         </>
     );

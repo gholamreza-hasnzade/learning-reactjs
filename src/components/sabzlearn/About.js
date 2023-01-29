@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function About() {
     return (
@@ -13,7 +13,8 @@ export default function About() {
             </div>
 
             <hr />
-            <Routes>
+            <Outlet />
+            {/*  <Routes>
                 <Route
                     path="setting"
                     element={<p style={{ textAlign: "center" }}>Setting</p>}
@@ -22,7 +23,7 @@ export default function About() {
                     path="dashboard"
                     element={<p style={{ textAlign: "center" }}>Dashboard</p>}
                 />
-            </Routes>
+            </Routes> */}
         </div>
     );
 }
