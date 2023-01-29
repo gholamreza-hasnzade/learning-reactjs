@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Courses from "./Courses";
+import About from "./About";
 
 const Sablearn = () => {
     return (
@@ -10,6 +11,7 @@ const Sablearn = () => {
             <Routes>
                 {" "}
                 <Route path="/courses" element={<Courses />} />
+                <Route path="/about/*" element={<About />} />
             </Routes>
         </>
     );
