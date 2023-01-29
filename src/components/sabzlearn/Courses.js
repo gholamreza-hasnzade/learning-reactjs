@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import coursesData from "./CoursesData";
 import Course from "./Course";
 
 const Courses = () => {
-    const [courses, setCourses] = useState(coursesData);
 
     return (
         <div
@@ -13,7 +12,7 @@ const Courses = () => {
                 marginTop: 40,
             }}
         >
-            {courses.map((course) => (
+            {coursesData.map((course) => (
                 <Course key={course.id} {...course} />
             ))}
         </div>
