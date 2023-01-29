@@ -3,6 +3,7 @@ import About from "./About";
 import MainCourse from "./MainCourse";
 import Panel from "./Panel";
 import Login from "./Login";
+import Dashboard from "./Dashboard";
 
 const routes = [
     { path: "/courses", element: <Courses /> },
@@ -23,5 +24,6 @@ const routes = [
     },
     { path: "/login", element: <Login /> },
     { path: "/panel", element: <Panel /> },
+    { path: "/panel", element: <Dashboard /> },
 ];
 export default routes;
