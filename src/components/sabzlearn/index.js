@@ -1,16 +1,15 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Header from "./Header";
-import Courses from "./Courses";
-import About from "./About";
-import MainCourse from "./MainCourse";
+import routes from "./routes";
 
 const Sablearn = () => {
+    const router = useRoutes(routes);
     return (
         <>
             <Header />
-            <Routes>
-                <Route path="/courses" element={<Courses />} />
+            {/* <Routes>
+                  <Route path="/courses" element={<Courses />} />
                 <Route path="/course/:courseID" element={<MainCourse />} />
                 <Route path="/about/*" element={<About />}>
                     <Route
@@ -24,7 +23,8 @@ const Sablearn = () => {
                         }
                     />
                 </Route>
-            </Routes>
+            </Routes> */}
+            {router}
         </>
     );
 };
