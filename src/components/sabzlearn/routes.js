@@ -4,6 +4,7 @@ import MainCourse from "./MainCourse";
 import Panel from "./Panel";
 import Login from "./Login";
 import Dashboard from "./Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = [
     { path: "/courses", element: <Courses /> },
@@ -23,7 +24,13 @@ const routes = [
         ],
     },
     { path: "/login", element: <Login /> },
-    { path: "/panel", element: <Panel /> },
-    { path: "/dashboard", element: <Dashboard /> },
+    {
+        path: "/*",
+        element: <PrivateRoute />,
+        children: [
+            { path: "panel", element: <Panel /> },
+            { path: "dashboard", element: <Dashboard /> },
+        ],
+    },
 ];
 export default routes;
