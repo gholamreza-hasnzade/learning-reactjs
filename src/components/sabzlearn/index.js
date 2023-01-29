@@ -10,7 +10,6 @@ const Sablearn = () => {
         <>
             <Header />
             <Routes>
-                {" "}
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/course/:courseID" element={<MainCourse />} />
                 <Route path="/about/*" element={<About />} />
