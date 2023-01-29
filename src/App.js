@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Routes, BrowserRouter } from "react-router-dom";
+import {  BrowserRouter } from "react-router-dom";
 import Sablearn from "./components/sabzlearn";
 /* import Home from "./components/learn-rrd/Home";
 import Contact from "./components/learn-rrd/Contact";
