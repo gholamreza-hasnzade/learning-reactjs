@@ -1,36 +1,55 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 const Header = () => {
     return (
         <Container>
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">SabzLearn</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Link to="/" style={{ marginLeft: 35, color: "#fff" }}>
+                    <NavLink
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        to="/"
+                        style={{ marginLeft: 35, color: "#fff" }}
+                    >
                         Home
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to="/courses"
+                        className={({ isActive }) => (isActive ? "active" : "")}
                         style={{ marginLeft: 35, color: "#fff" }}
                     >
                         Courses
-                    </Link>
-                    <Link to="/about" style={{ marginLeft: 35, color: "#fff" }}>
+                    </NavLink>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        style={{ marginLeft: 35, color: "#fff" }}
+                    >
                         About
-                    </Link>
-                    <Link to="/login" style={{ marginLeft: 35, color: "#fff" }}>
+                    </NavLink>
+                    <NavLink
+                        to="/login"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        style={{ marginLeft: 35, color: "#fff" }}
+                    >
                         login
-                    </Link>
-                    <Link to="/panel" style={{ marginLeft: 35, color: "#fff" }}>
+                    </NavLink>
+                    <NavLink
+                        to="/panel"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        style={{ marginLeft: 35, color: "#fff" }}
+                    >
                         panel
-                    </Link>
-                    <Link
+                    </NavLink>
+                    <NavLink
                         to="/dashboard"
+                        className={({ isActive }) => (isActive ? "active" : "")}
                         style={{ marginLeft: 35, color: "#fff" }}
                     >
                         dashboard
-                    </Link>
+                    </NavLink>
                 </Nav>
             </Navbar>
         </Container>
