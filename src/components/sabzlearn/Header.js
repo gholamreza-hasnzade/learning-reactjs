@@ -25,6 +25,12 @@ const Header = () => {
                     <Link to="/panel" style={{ marginLeft: 35, color: "#fff" }}>
                         panel
                     </Link>
+                    <Link
+                        to="/dashboard"
+                        style={{ marginLeft: 35, color: "#fff" }}
+                    >
+                        dashboard
+                    </Link>
                 </Nav>
             </Navbar>
         </Container>

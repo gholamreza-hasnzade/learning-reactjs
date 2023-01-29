@@ -24,6 +24,6 @@ const routes = [
     },
     { path: "/login", element: <Login /> },
     { path: "/panel", element: <Panel /> },
-    { path: "/panel", element: <Dashboard /> },
+    { path: "/dashboard", element: <Dashboard /> },
 ];
 export default routes;

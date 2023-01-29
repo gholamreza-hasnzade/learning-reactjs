@@ -1,5 +1,5 @@
 const isLogin = (username) => {
-    if (username === "Reza") {
+    if (username === "admin") {
         return true;
     }
     return false;
