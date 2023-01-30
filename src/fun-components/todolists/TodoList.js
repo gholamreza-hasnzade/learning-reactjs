@@ -18,10 +18,6 @@ const TodoList = () => {
                 completed: false,
             };
 
-            /*  seTodos({
-                todos: [...todos, newTodo],
-                todoTitle: "",
-            }); */
             seTodos((prevState) => {
                 return [...prevState, newTodo];
             });
