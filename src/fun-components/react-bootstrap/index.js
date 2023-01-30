@@ -1,16 +1,6 @@
 import React from "react";
 
-/* import {
-    Alert,
-    Button,
-    Card,
-    Col,
-    Container,
-    Modal,
-    Row,
-    Stack,
-} from "react-bootstrap";
-import Album_4 from "./Album_4.png"; */
+
 
 export const ReactBootstrap = () => {
     /*   const [show, setShow] = useState(false);
