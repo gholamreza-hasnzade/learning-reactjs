@@ -1,10 +1,21 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export default function About() {
+    const navigate = useNavigate();
     return (
         <div>
             <h3 style={{ textAlign: "center" }}>Welcome To About Page :))</h3>
+
+            <button
+                onClick={() => {
+                    navigate("/courses", {
+                        replace: false,
+                    });
+                }}
+            >
+                ثبت نام در دوره
+            </button>
 
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
                 <Link to="setting">Setting</Link>
@@ -14,16 +25,6 @@ export default function About() {
 
             <hr />
             <Outlet />
-            {/*  <Routes>
-                <Route
-                    path="setting"
-                    element={<p style={{ textAlign: "center" }}>Setting</p>}
-                />
-                <Route
-                    path="dashboard"
-                    element={<p style={{ textAlign: "center" }}>Dashboard</p>}
-                />
-            </Routes> */}
         </div>
     );
 }
